@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-form-noframework-client-side-solution",
+    "id": "12862dcc-cda5-4d01-b72e-f3f8bd120836",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-form-noframework description"
+      },
+      "longDescription": {
+        "default": "spfx-form-noframework description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-form-noframework Feature",
+        "description": "The feature that activates elements of the spfx-form-noframework solution.",
+        "id": "c6be9b20-97c2-4979-8487-028e3cbe1835",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-form-noframework.sppkg"
+  }
+}

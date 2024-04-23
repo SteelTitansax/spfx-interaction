@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-form-noframework-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spfxFormNoframework/SpfxFormNoframeworkWebPart.js",
+          "manifest": "./src/webparts/spfxFormNoframework/SpfxFormNoframeworkWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpfxFormNoframeworkWebPartStrings": "lib/webparts/spfxFormNoframework/loc/{locale}.js"
+  }
+}
