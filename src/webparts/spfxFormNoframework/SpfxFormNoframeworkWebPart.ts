@@ -88,8 +88,81 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
       </div>`;
 
       this._bindSave();
+      this._initialLayout();
       this._paginationNextBasicDetails();
+      this._paginationNextTemplate();
+      this._backBasicDetails();
+      this._backTemplate();
   }
+
+  private _initialLayout(): void {
+    // Pagination Next Basic Details (Basic details --> Template Selection) & BreadCrumb Update 
+    const NextBasicDetails = this.domElement.querySelector('#NextBasicDetails');
+       if (NextBasicDetails) {
+
+        // Elements to hide
+
+            // Hide BttnEmp
+            var BttnEmp = document.getElementById("BttnEmp");
+            if (BttnEmp !== null) {
+              BttnEmp.style.display = "none";
+            } else {
+                // Handle the case where the element is not found
+                console.error("Element with id 'BttnEmp' not found");
+            }
+
+            // Hide NextTemplate
+             var NextTemplate = document.getElementById("NextTemplate");
+             if (NextTemplate !== null) {
+              NextTemplate.style.display = "none";
+             } else {
+                 // Handle the case where the element is not found
+                 console.error("Element with id 'NextTemplate' not found");
+             }
+
+            // Hide BackBasicDetails
+            var BackBasicDetails = document.getElementById("BackBasicDetails");
+            if (BackBasicDetails !== null) {
+              BackBasicDetails.style.display = "none";
+            } else {
+                // Handle the case where the element is not found
+                console.error("Element with id 'BackBasicDetails' not found");
+            }
+
+            // Hide BackTemplate
+            var BackTemplate = document.getElementById("BackTemplate");
+            if (BackTemplate !== null) {
+              BackTemplate.style.display = "none";
+            } else {
+                // Handle the case where the element is not found
+                console.error("Element with id 'BackTemplate' not found");
+            }
+
+            // Hide Approver
+            var Approver = document.getElementById("Approver");
+            if (Approver !== null) {
+              Approver.style.display = "none";
+            } else {
+                // Handle the case where the element is not found
+                console.error("Element with id 'Approver' not found");
+            }
+
+            // Hide TemplateSelection
+            var TemplateSelection = document.getElementById("TemplateSelection");
+            if (TemplateSelection !== null) {
+              TemplateSelection.style.display = "none";
+            } else {
+                // Handle the case where the element is not found
+                console.error("Element with id 'TemplateSelection' not found");
+            }
+        
+       } else {
+           console.error("Button element '#BttnEmp' not found.");
+         }
+
+ }
+
+
 
   private _paginationNextBasicDetails(): void {
      // Pagination Next Basic Details (Basic details --> Template Selection) & BreadCrumb Update 
@@ -172,6 +245,297 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
           }
 
   }
+
+
+  private _paginationNextTemplate(): void {
+     // Pagination from NextTemplate (Template Selection to Approvals) & BreadCrumb Update 
+    const NextTemplate = this.domElement.querySelector('#NextTemplate');
+       if (NextTemplate) {
+
+        NextTemplate.addEventListener('click', () => { 
+
+           // Elements to hide
+
+           // Hide NextBasicDetails
+           var NextBasicDetail = document.getElementById("NextBasicDetails");
+           if (NextBasicDetail !== null) {
+             NextBasicDetail.style.display = "none";
+           } else {
+               // Handle the case where the element is not found
+               console.error("Element with id 'NextBasicDetails' not found");
+           }
+
+           // Hide BasicDetails
+           var BasicDetails = document.getElementById("BasicDetails");
+           if (BasicDetails !== null) {
+             BasicDetails.style.display = "none";
+           } else {
+               // Handle the case where the element is not found
+               console.error("Element with id 'BasicDetails' not found");
+           }
+
+           // Hide TemplateSelection
+           var TemplateSelection = document.getElementById("TemplateSelection");
+           if (TemplateSelection !== null) {
+            TemplateSelection.style.display = "none";
+           } else {
+               // Handle the case where the element is not found
+               console.error("Element with id 'TemplateSelection' not found");
+           }
+
+           // Hide NextTemplate
+           var NextTemplate = document.getElementById("NextTemplate");
+           if (NextTemplate !== null) {
+            NextTemplate.style.display = "none";
+           } else {
+               // Handle the case where the element is not found
+               console.error("Element with id 'NextTemplate' not found");
+           }
+
+          // Hide BackBasicDetails
+          var BackBasicDetails = document.getElementById("BackBasicDetails");
+          if (BackBasicDetails !== null) {
+            BackBasicDetails.style.display = "none";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'BackBasicDetails' not found");
+          }
+
+
+           // Elements to show
+           
+           // Show Approver
+           var Approver = document.getElementById("Approver");
+           if (Approver !== null) {
+            Approver.style.display = "Block";
+           } else {
+               // Handle the case where the element is not found
+               console.error("Element with id 'Approver' not found");
+           }
+
+           // Show BttnEmp
+           var BttnEmp = document.getElementById("BttnEmp");
+           if (BttnEmp !== null) {
+            BttnEmp.style.display = "Block";
+           } else {
+               // Handle the case where the element is not found
+               console.error("Element with id 'BttnEmp' not found");
+           }
+
+           // Show BackTemplate
+           var BackTemplate = document.getElementById("BackTemplate");
+           if (BackTemplate !== null) {
+            BackTemplate.style.display = "Block";
+           } else {
+               // Handle the case where the element is not found
+               console.error("Element with id 'BackTemplate' not found");
+           }
+           
+       });
+         
+       } else {
+           console.error("Button element '#NextTemplate' not found.");
+         }
+
+  }
+
+
+  private _backBasicDetails(): void {
+      // Pagination Back Basic Details (Template Selection --> Basic details ) & BreadCrumb Update 
+      const BackBasicDetails = this.domElement.querySelector('#BackBasicDetails');
+      if (BackBasicDetails) {
+
+        BackBasicDetails.addEventListener('click', () => { 
+
+          // Elements to hide
+
+          // Hide NextBasicDetails
+          var NextBasicDetail = document.getElementById("NextBasicDetails");
+          if (NextBasicDetail !== null) {
+            NextBasicDetail.style.display = "none";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'NextBasicDetails' not found");
+          }
+
+          
+          // Hide TemplateSelection
+          var TemplateSelection = document.getElementById("TemplateSelection");
+          if (TemplateSelection !== null) {
+          TemplateSelection.style.display = "none";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'TemplateSelection' not found");
+          }
+
+          // Hide Approver
+          var Approver = document.getElementById("Approver");
+          if (Approver !== null) {
+            Approver.style.display = "none";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'Approver' not found");
+          }
+
+          
+          
+          // Hide BttnEmp
+          var BttnEmp = document.getElementById("BttnEmp");
+          if (BttnEmp !== null) {
+            BttnEmp.style.display = "none";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'BttnEmp' not found");
+          }
+          
+          // Hide BackBasicDetails
+          var BackBasicDetails = document.getElementById("BackBasicDetails");
+          if (BackBasicDetails !== null) {
+            BackBasicDetails.style.display = "none";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'BackBasicDetails' not found");
+          }
+
+          // Hide NextTemplate
+          var NextTemplate = document.getElementById("NextTemplate");
+          if (NextTemplate !== null) {
+          NextTemplate.style.display = "none";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'NextTemplate' not found");
+          }
+
+
+          // Elements to show
+          
+          // Show BasicDetails
+          var BasicDetails = document.getElementById("BasicDetails");
+          if (BasicDetails !== null) {
+          BasicDetails.style.display = "Block";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'BasicDetails' not found");
+          }
+
+          // Show NextBasicDetails
+          var NextBasicDetails = document.getElementById("NextBasicDetails");
+          if (NextBasicDetails !== null) {
+          NextBasicDetails.style.display = "Block";
+          } else {
+              // Handle the case where the element is not found
+              console.error("Element with id 'NextBasicDetails' not found");
+          }
+
+          
+          
+      });
+        
+      } else {
+          console.error("Button element '#BackBasicDetails' not found.");
+        }
+
+  }
+
+
+  private _backTemplate(): void {
+    // Pagination from NextTemplate (Template Selection to Approvals) & BreadCrumb Update 
+    const BackTemplate = this.domElement.querySelector('#BackTemplate');
+    if (BackTemplate) {
+
+      BackTemplate.addEventListener('click', () => { 
+
+        // Elements to hide
+
+        // Hide NextBasicDetails
+        var NextBasicDetail = document.getElementById("NextBasicDetails");
+        if (NextBasicDetail !== null) {
+          NextBasicDetail.style.display = "none";
+        } else {
+            // Handle the case where the element is not found
+            console.error("Element with id 'NextBasicDetails' not found");
+        }
+
+        
+        // Hide BasicDetails
+        var BasicDetails = document.getElementById("BasicDetails");
+        if (BasicDetails !== null) {
+          BasicDetails.style.display = "none";
+        } else {
+            // Handle the case where the element is not found
+            console.error("Element with id 'BasicDetails' not found");
+        }
+
+        // Hide Approver
+        var Approver = document.getElementById("Approver");
+        if (Approver !== null) {
+          Approver.style.display = "none";
+        } else {
+            // Handle the case where the element is not found
+            console.error("Element with id 'Approver' not found");
+        }
+
+        
+        
+        // Hide BttnEmp
+        var BttnEmp = document.getElementById("BttnEmp");
+        if (BttnEmp !== null) {
+          BttnEmp.style.display = "none";
+        } else {
+            // Handle the case where the element is not found
+            console.error("Element with id 'BttnEmp' not found");
+        }
+        
+        // Hide BackTemplate
+        var BackTemplate = document.getElementById("BackTemplate");
+        if (BackTemplate !== null) {
+          BackTemplate.style.display = "none";
+        } else {
+            // Handle the case where the element is not found
+            console.error("Element with id 'BackTemplate' not found");
+        }
+
+        
+
+
+        // Elements to show
+        
+        // Show TemplateSelection
+        var TemplateSelection = document.getElementById("TemplateSelection");
+        if (TemplateSelection !== null) {
+          TemplateSelection.style.display = "Block";
+        } else {
+            // Handle the case where the element is not found
+            console.error("Element with id 'BasicDetails' not found");
+        }
+
+        // Show NextTemplate
+        var NextTemplate = document.getElementById("NextTemplate");
+        if (NextTemplate !== null) {
+          NextTemplate.style.display = "Block";
+        } else {
+            // Handle the case where the element is not found
+            console.error("Element with id 'NextTemplate' not found");
+        }
+
+        // Show BackBasicDetails
+        var BackBasicDetails = document.getElementById("BackBasicDetails");
+        if (BackBasicDetails !== null) {
+          BackBasicDetails.style.display = "Block";
+        } else {
+            // Handle the case where the element is not found
+            console.error("Element with id 'BackBasicDetails' not found");
+        }
+        
+        
+    });
+      
+    } else {
+        console.error("Button element '#BackTemplate' not found.");
+      }
+
+  }
+
 
   private _bindSave(): void {
 
