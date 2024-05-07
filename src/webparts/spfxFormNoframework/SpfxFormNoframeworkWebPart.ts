@@ -7,7 +7,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import type { IReadonlyTheme } from '@microsoft/sp-component-base';
 //import { escape } from '@microsoft/sp-lodash-subset';
 
-//import styles from './SpfxFormNoframeworkWebPart.module.scss';
+import styles from './SpfxFormNoframeworkWebPart.module.scss';
 import * as strings from 'SpfxFormNoframeworkWebPartStrings';
 import {ISPHttpClientOptions, SPHttpClient,SPHttpClientResponse} from '@microsoft/sp-http';
 
@@ -26,7 +26,7 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
     <div>
         
         <!-- Basic details -->
-        <div id="BasicDetails">
+        <div class=${styles.Welcome} id="BasicDetails">
 
           <p> Please the fill basic details of the contract </p>
 
@@ -565,7 +565,7 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
     //var comments = (document.getElementById("comments") as HTMLInputElement).value;
     console.log(contractNumber);
     console.log(country);
-    const siteUrl: string = "https://t8656.sharepoint.com/sites/Sharepoint_Interaction/_api/web/lists/getbytitle(PoC_ContractHUB2)/items"
+    const siteUrl: string = "https://t8656.sharepoint.com/sites/Sharepoint_Interaction/_api/web/lists/getbytitle('PoC_ContractHUB2')/items"
     const itemBody: any = {
 
       "Title": 'TestWebpart',
