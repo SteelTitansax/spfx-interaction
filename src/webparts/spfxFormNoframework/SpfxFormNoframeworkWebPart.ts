@@ -24,9 +24,11 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
   public render(): void {
     this.domElement.innerHTML = `
     <div>
+
         
+    
         <!-- Basic details -->
-        <div class=${styles.Welcome} id="BasicDetails">
+        <div class=${styles.welcome} id="BasicDetails">
 
           <p> Please the fill basic details of the contract </p>
 
@@ -565,7 +567,7 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
     //var comments = (document.getElementById("comments") as HTMLInputElement).value;
     console.log(contractNumber);
     console.log(country);
-    const siteUrl: string = "https://t8656.sharepoint.com/sites/Sharepoint_Interaction/_api/web/lists/getbytitle('PoC_SharepointInteraction')/items"
+    const siteUrl: string = "https://t8656.sharepoint.com/sites/Sharepoint_Interaction/_api/web/lists/getbytitle('PoC_ContractHUB2')/items"
     const itemBody: any = {
 
       "Title": 'TestWebpart',
