@@ -30,17 +30,13 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
         <!-- Basic details -->
         <div class=${styles.formBody} id="BasicDetails">
 
-          <p> Please the fill basic details of the contract </p>
+          <p> Please the fill in the form basic details </p>
 
-          <input type="text" id="contractNumber" placeholder="Contract Number" name="Contract Number" />
-          <input type="text" id="nextAction" placeholder="Next Action" name="Next Action" />
-          <input type="text" id="customerName" placeholder="Customer Name" name="Customer Name" />
-          <input type="text" id="industrySegment" placeholder="Industry Segment" name="Industry Segment" />
-          <input type="text" id="salesUnit" placeholder="Sales Unit" name="Sales Unit" />
-          <input type="text" id="salesPerson" placeholder="Sales Person" name="Sales Person" />
-          <input type="text" id="reason" placeholder="Reason" name="Reason" />
+          <input type="text" id="contractNumber" placeholder="Title" name="Title" />
+          <input type="text" id="nextAction" placeholder="Description" name="Description" />
+          <input type="text" id="customerName" placeholder="Customer Name" name="Customer" />
+          <input type="text" id="industrySegment" placeholder="Industry" name="Industry" />
           <input type="text" id="product" placeholder="Product" name="Product" />
-          <input type="text" id="lastChange" placeholder="Last Change" name="Last Change" />
           <input type="text" id="comments" placeholder="Comments" name="Comments" />
         
         </div>
@@ -48,7 +44,7 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
         <!-- Template Selection -->
         <div class=${styles.formBody} id="TemplateSelection">
 
-          <label for="country">Choose a country Template</label>
+          <label for="country">Choose a country</label>
 
           <select type="text" id="country">
             <option value="UK">United Kingdom</option>
@@ -60,8 +56,8 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
         
         <!-- Approver -->
         <div class=${styles.formBody} id="Approver">
-          <p> Please the fill the approver </p>
-          <input type="text" id="approver" placeholder="Approver" name="Approver" />
+          <p> Please the fill the Contact Person </p>
+          <input type="text" id="approver" placeholder="Contact Person" name="Contact Person" />
 
         </div>
         
@@ -76,12 +72,12 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
             <!-- PaginationButtons -->
             <div class=${styles.buttonsLeft} id ="NavigationButtonsLeft">
             <input  type="button" id="BackBasicDetails" value="Back - Basic Details"></input>  
-            <input type="button" id="BackTemplate" value="Back - Choose Template"></input> 
+            <input type="button" id="BackTemplate" value="Back - Choose Country"></input> 
 
             </div>
             <div class=${styles.buttonsRight} id ="NavigationButtonsRight">
-            <input type="button"  id="NextBasicDetails" value="Next - Template Selection"></input>
-            <input type="button" id="NextTemplate" value="Next - Approvers"></input> 
+            <input type="button"  id="NextBasicDetails" value="Next - Choose Country"></input>
+            <input type="button" id="NextTemplate" value="Next - Contact Person"></input> 
             <input type="button" id="BttnEmp" value="Submit"></input> 
             </div>
         </div>
