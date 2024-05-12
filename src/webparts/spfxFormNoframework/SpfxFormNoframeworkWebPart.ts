@@ -12,8 +12,6 @@ import * as strings from 'SpfxFormNoframeworkWebPartStrings';
 import {ISPHttpClientOptions, SPHttpClient,SPHttpClientResponse} from '@microsoft/sp-http';
 
 
-
-
 export interface ISpfxWebpartNoFrameworkWebPartProps {
   description: string;
 }
@@ -30,7 +28,7 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
         
     
         <!-- Basic details -->
-        <div class=${styles.welcome} id="BasicDetails">
+        <div class=${styles.formBody} id="BasicDetails">
 
           <p> Please the fill basic details of the contract </p>
 
@@ -48,7 +46,7 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
         </div>
         
         <!-- Template Selection -->
-        <div id="TemplateSelection">
+        <div class=${styles.formBody} id="TemplateSelection">
 
           <label for="country">Choose a country Template</label>
 
@@ -61,7 +59,7 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
         </div>
         
         <!-- Approver -->
-        <div id="Approver">
+        <div class=${styles.formBody} id="Approver">
           <p> Please the fill the approver </p>
           <input type="text" id="approver" placeholder="Approver" name="Approver" />
 
@@ -76,12 +74,12 @@ export default class SpfxWebpartNoFrameworkWebPart extends BaseClientSideWebPart
            
                   
             <!-- PaginationButtons -->
-            <div id ="NavigationButtonsLeft">
+            <div class=${styles.buttonsLeft} id ="NavigationButtonsLeft">
             <input  type="button" id="BackBasicDetails" value="Back - Basic Details"></input>  
             <input type="button" id="BackTemplate" value="Back - Choose Template"></input> 
 
             </div>
-            <div id ="NavigationButtonsRight">
+            <div class=${styles.buttonsRight} id ="NavigationButtonsRight">
             <input type="button"  id="NextBasicDetails" value="Next - Template Selection"></input>
             <input type="button" id="NextTemplate" value="Next - Approvers"></input> 
             <input type="button" id="BttnEmp" value="Submit"></input> 
